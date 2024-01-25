@@ -1,0 +1,13 @@
+.button {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.todo-item {
+    display: flex;
+    list-style-type: none;
+}

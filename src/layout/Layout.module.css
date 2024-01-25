@@ -1,0 +1,11 @@
+.layout {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.input {
+    border: none;
+    background-color: inherit;
+    padding: 10px 5px;
+    border-bottom: 1px solid #000;
+}
