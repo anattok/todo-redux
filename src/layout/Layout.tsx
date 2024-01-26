@@ -12,8 +12,10 @@ export const Layout: FC = () => {
   const dispatch = useDispatch();
 
   const addTask = () => {
-    dispatch(addTodo({ text }));
-    setText("");
+    if (text.trim().length) {
+      dispatch(addTodo({ text }));
+      setText("");
+    }
   };
 
   return (

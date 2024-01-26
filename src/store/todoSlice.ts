@@ -29,11 +29,19 @@ export const todoSlice = createSlice({
         completed: false,
       });
     },
-    deleteTodo() {},
-    toggleTodo() {},
+    deleteTodo(state, action) {
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload.id);
+    },
+    toggleTodo(state, action) {
+      state.todos = state.todos.map((todo) =>
+        todo.id === action.payload.id
+          ? { ...todo, completed: !todo.completed }
+          : todo
+      );
+    },
   },
 });
 
-export const { addTodo } = todoSlice.actions;
+export const { addTodo, deleteTodo, toggleTodo } = todoSlice.actions;
 export default todoSlice.reducer;
 export type RootState = ReturnType<typeof todoSlice.reducer>;

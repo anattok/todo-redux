@@ -9,5 +9,14 @@
 
 .todo-item {
     display: flex;
+    justify-content: space-between;
     list-style-type: none;
+}
+
+.todo-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.checkbox:checked+.text {
+    text-decoration: line-through;
 }
